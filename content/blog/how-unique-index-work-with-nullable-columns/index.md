@@ -6,7 +6,7 @@ description: Unique Index shall ignore nullable columns
 
 ## Stranger Problem I met today
 
-I use nodejs to develop a simple app talking to `sql server`. 
+I use nodejs to develop a simple app talking to `sql server`.
 
 ```javascript
 import Knex from 'knex'
@@ -72,7 +72,7 @@ insert into Book (name) values('alice')
 insert into Book (name) values('alice')
 ```
 
-I got the error below, which means the `unique index ` will consider the null.
+I got the error below, which means the `unique index` will consider the null.
 
 ```sql
 ## Cannot insert duplicate key row in object 'dbo.Book' with unique index 'book_name_title_unique'. The duplicate key value is (alice, <NULL>).
@@ -87,16 +87,16 @@ originalError: [object Object]
 precedingErrors:
 ```
 
- So what is the gap with when we use `knex`? After dive in for a while, I found out it is because `knex` will add a where condition when create unique index, so the code `t.unique(['name', 'title'])` will be translated into 
+ So what is the gap with when we use `knex`? After dive in for a while, I found out it is because `knex` will add a where condition when create unique index, so the code `t.unique(['name', 'title'])` will be translated into
 
 ```sql
-create unique index book_name_title_unique on Book(name, title) 
+create unique index book_name_title_unique on Book(name, title)
 where name is not null and title is not null
 ```
 
 Check the source code: [knex/tablecompiler.js · GitHub](https://github.com/tgriesser/knex/blob/9aa7085b052938dc5252d10b2b418a475637eda5/lib/dialects/mssql/schema/tablecompiler.js#L184-L188)
 
-## How about other kind of databases?
+## How about other kind of databases
 
 Is this behavior unique in `mssql`? Let’s try it on `postgres`. I got the same results as `mssql`. And even more, In `postgres`, the `where condition` is built-in. Like the below, all the statements will run properly.
 
