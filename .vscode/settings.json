@@ -1,6 +1,8 @@
 {
     "svn.ignoreMissingSvnWarning": true,
     "cSpell.words": [
+        "codegen",
+        "frontmatter",
         "iframe",
         "merriweather",
         "prismjs",
