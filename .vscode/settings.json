@@ -5,7 +5,9 @@
         "frontmatter",
         "iframe",
         "merriweather",
+        "postgres",
         "prismjs",
+        "tablecompiler",
         "wordpress"
     ]
 }
