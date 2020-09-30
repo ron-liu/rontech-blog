@@ -6,9 +6,9 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
-import { IndexPageQueryQuery } from "../../graphql-types"
+import { LearnedTodayPageQueryQuery } from "../../graphql-types"
 
-const BlogIndex = ({ data, location }: PageProps<IndexPageQueryQuery>) => {
+const BlogIndex = ({ data, location }: PageProps<LearnedTodayPageQueryQuery>) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
 
@@ -16,7 +16,7 @@ const BlogIndex = ({ data, location }: PageProps<IndexPageQueryQuery>) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
       <Bio />
-      <Link to="/learned-today">What I learned today</Link>
+      <Link to="/">Blog</Link>
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
@@ -50,7 +50,7 @@ const BlogIndex = ({ data, location }: PageProps<IndexPageQueryQuery>) => {
 export default BlogIndex
 
 export const pageQuery = graphql`
-  query IndexPageQuery {
+  query LearnedTodayPageQuery {
     site {
       siteMetadata {
         title
@@ -58,7 +58,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
         sort: { fields: [frontmatter___date], order: DESC }
-        filter: {fileAbsolutePath: {regex: "/content\/blog/.*\\.md$/"}}
+        filter: {fileAbsolutePath: {regex: "/content\/learned-today/.*\\.md$/"}}
        ) {
       edges {
         node {
