@@ -1,7 +1,8 @@
 ---
-tag: ["mac", "gatsby"]
+tag: ["mac", "gatsby", "react"]
 date: "2020-05-20"
 ---
+
 # What I learned 01/10/2020
 
 ## mac
@@ -18,21 +19,25 @@ We can filter `fileAbsolutePath` by using regular expression, check below or [qu
 
 ```graphql
 {
-   allMarkdownRemark(
-    sort: { order: DESC, fields: [frontmatter___date]},
-    filter: {fileAbsolutePath: {regex: "/(type1)/.*\\.md$/"}}
+  allMarkdownRemark(
+    sort: { order: DESC, fields: [frontmatter___date] }
+    filter: { fileAbsolutePath: { regex: "/(type1)/.*\\.md$/" } }
   ) {
-      edges {
-        node {
-          excerpt(pruneLength: 250)
-          id
-          frontmatter {
-            title
-            date(formatString: "MMMM DD, YYYY")
-            path
-          }
+    edges {
+      node {
+        excerpt(pruneLength: 250)
+        id
+        frontmatter {
+          title
+          date(formatString: "MMMM DD, YYYY")
+          path
         }
       }
     }
+  }
 }
 ```
+
+### react
+
+[secrets of the act... api](https://github.com/threepointone/react-act-examples/blob/master/sync.md)
