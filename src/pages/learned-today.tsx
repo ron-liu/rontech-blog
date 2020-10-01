@@ -18,7 +18,7 @@ const BlogIndex = ({ data, location }: PageProps<LearnedTodayPageQueryQuery>) =>
       <Bio />
       <Link to="/">Blog</Link>
       {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
+        const title = node.frontmatter.title || node.frontmatter.date
         return (
           <article key={node.fields.slug}>
             <header>

@@ -1,6 +1,6 @@
 ---
 tag: ["mac", "gatsby", "react"]
-date: "2020-05-20"
+date: "2020-10-01"
 ---
 
 # What I learned 01/10/2020
