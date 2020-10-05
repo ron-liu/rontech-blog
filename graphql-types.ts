@@ -3032,7 +3032,7 @@ export type LearnedTodayPageQueryQueryVariables = Exact<{ [key: string]: never; 
 
 
 export type LearnedTodayPageQueryQuery = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'title'>> }>, allMarkdownRemark: { edges: Array<{ node: (
-        Pick<MarkdownRemark, 'excerpt'>
+        Pick<MarkdownRemark, 'fileAbsolutePath' | 'excerpt'>
         & { fields?: Maybe<Pick<MarkdownRemarkFields, 'slug'>>, frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'date' | 'title' | 'description'>> }
       ) }> } };
 

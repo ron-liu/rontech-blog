@@ -1,16 +1,12 @@
 ---
-tag: ["gatsbyjs"]
-date: "2020-09-30"
+tag: ["gatsby"]
 ---
-# What I learned 30/09/2020
 
-## gatsbyjs
-
-### How to do tags in gatsby
+* [gatsbyjs] How to do tags in gatsby
 
 Check this [gatsby official site](https://www.gatsbyjs.com/docs/adding-tags-and-categories-to-blog-posts/)
 
-- In the `frontmatter`, create a new item called `tags`, then put it as a string array like below:
+* In the `frontmatter`, create a new item called `tags`, then put it as a string array like below:
 
   ```gatsby
   ---
@@ -18,7 +14,7 @@ Check this [gatsby official site](https://www.gatsbyjs.com/docs/adding-tags-and-
   ---
   ```
 
-- Group tags
+* Group tags
 
   ```graphql
   query() {
@@ -31,7 +27,7 @@ Check this [gatsby official site](https://www.gatsbyjs.com/docs/adding-tags-and-
   }
   ```
 
-- Make a tag page
+* Make a tag page
 
   ```graphql
   query($tag: String) {
