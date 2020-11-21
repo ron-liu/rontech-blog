@@ -1,17 +1,18 @@
 {
-    "svn.ignoreMissingSvnWarning": true,
-    "cSpell.words": [
-        "codegen",
-        "defi",
-        "frontmatter",
-        "gatsbyjs",
-        "iframe",
-        "merriweather",
-        "postgres",
-        "prismjs",
-        "stackoverflow",
-        "tablecompiler",
-        "wordpress",
-        "xcode"
-    ]
+  "svn.ignoreMissingSvnWarning": true,
+  "cSpell.language": "en-GB",
+  "cSpell.words": [
+    "codegen",
+    "defi",
+    "frontmatter",
+    "gatsbyjs",
+    "iframe",
+    "merriweather",
+    "postgres",
+    "prismjs",
+    "stackoverflow",
+    "tablecompiler",
+    "wordpress",
+    "xcode"
+  ]
 }
