@@ -1,4 +1,7 @@
-# Tips to avoid pitfalls when using useEffect in React
+---
+title: 4 Tips to avoid pitfalls when using useEffect in React
+date: "2020-05-20"
+---
 
 `useEffect` is the most widely used hook in React. It is handy and looks easy to use, but you must experience infinite loops or some unexpected result when using `useEffect`. In this article, I try to give you some tips to avoid those typical pitfalls when using it.
 
