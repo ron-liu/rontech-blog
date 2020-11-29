@@ -1,7 +1,7 @@
 ---
-title: "react useEffect pattern: ref previous"
+title: react useEffect pattern ref previous
 date: "2020-11-28"
-description: 'use "ref previous" to solve complex effect triggering issue'
+description: use ref previous to solve complex effect triggering issue
 ---
 
 ## Problem
