@@ -1,6 +1,6 @@
 ---
 title: 4 Tips to avoid pitfalls when using useEffect in React
-date: "2020-05-20"
+date: "2020-11-21"
 ---
 
 `useEffect` is the most widely used hook in React. It is handy and looks easy to use, but you must experience infinite loops or some unexpected result when using `useEffect`. In this article, I try to give you some tips to avoid those typical pitfalls when using it.
@@ -15,7 +15,7 @@ type EffectCallback = () => void | (() => void | undefined)
 type DependencyList = any[]
 ```
 
-There are three factors in `useEffect`, `effect`, `cleanup`, and `deps`.
+There are three factors in `useEffect`, `effect`, `cleanUp`, and `deps`.
 The key point is `effect`. We all know `useEffect` is to wrap `side effects` something like `data fetching`, `DOM operations`, etc. To be honest, when I read this at very first time, I didn’t quite understand, util I realised that action wrapped by `useEffect` actually will be executed after the normal render process. It is more like the below:
 
 ```typescript
