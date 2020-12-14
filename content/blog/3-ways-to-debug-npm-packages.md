@@ -16,7 +16,7 @@ Before we jump into the three method, let's image the below scenarios we want to
 
 - Test out of our team: Other team or our customers want to test the package.
 
-## Method 1 yarn link
+## Method 1: yarn link
 
 **Used scenarios: `Test locally`**
 
@@ -32,7 +32,7 @@ By setting up the above, when we modify `awesome-router` project, `try-router` t
 
 However, due to the limitation of `symlink`, this approach only works for the case when consumer and source package stay in the same computer.
 
-## Method 2 yarn pack
+## Method 2: yarn pack
 
 **Used scenarios: `Test within our team`**
 
@@ -45,12 +45,12 @@ Is there some easy way, like some simulated local npm package center?
 Yes, `yarn pack` comes to rescue:
 
 1. In my computer, under folder of `~/awesome-router`, run `yarn pack`
-It creates a compressed gzip archive of package dependencies, something like: `awesome-router-v0.1.0.tgz`. It is the package that upload to npm package center.
+  It creates a compressed gzip archive of package dependencies, something like: `awesome-router-v0.1.0.tgz`. It is the package that upload to npm package center.
 
 2. Copy the generated gzip file to my college computer, might directly under `~/tiger-shopping`.
 
 3. In my college computer, under folder of `~/tiger-shopping`, run `yarn add awesome-router-v0.1.0.tgz`
-It added the package into its `node_modules` folder. If in the `package.json` file, we find that the `awesome-router` line has been changed to something like the below:
+   It added the package into its `node_modules` folder. If in the `package.json` file, we find that the `awesome-router` line has been changed to something like the below:
 
 ```json
 {
@@ -70,11 +70,14 @@ If my college find bugs, and I need to modify the code and do the following agai
 
 2. Copy the generated gzip file to my college computer, might directly under `~/tiger-shopping`.
 
-3. Because usually the gzip output filename didn't change (The gzip file is named as package name plus version number, the name will be the same as no version bumped), and yarn will cache the package. If we run the `yarn add awesome-router-v0.1.0.tgz`, it will use the cached file, and the package didn't get updated. We need to clean the cache by running `yarn cache clean --pattern awesome-router`.
+3. run `yarn cache clean --pattern awesome-router` 
+   Because usually the gzip output filename didn't change (The gzip file is named as package name plus version number, the name will be the same as no version bumped), and yarn will cache the package. If we run the `yarn add awesome-router-v0.1.0.tgz`, it will use the cached file, and the package didn't get updated. We need to clean the cache by running `yarn cache clean --pattern awesome-router`.
+
+4. run `yarn add awesome-router-v0.1.0.tgz`
 
 Until everything goes well, then I can publish the package, and he/she can run `yarn add awesome-router` to update the package.
 
-## Method 3 Release beta
+## Method 3: Release beta
 
 Used scenario: `Test outside our team`
 
