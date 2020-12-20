@@ -2,6 +2,7 @@
   "svn.ignoreMissingSvnWarning": true,
   "cSpell.language": "en-GB",
   "cSpell.words": [
+    "Runtypes",
     "codegen",
     "defi",
     "frontmatter",
@@ -12,6 +13,7 @@
     "prismjs",
     "stackoverflow",
     "tablecompiler",
+    "typeof",
     "wordpress",
     "xcode"
   ]
