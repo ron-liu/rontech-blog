@@ -1,8 +1,9 @@
 ---
-title: Extend typescript to runtime - I
+title: Extend typescript to runtime - Part I using runtypes
 date: "2020-12-20"
 description: typescript types will be wiped when compiling, but how to use these types in runtime?
 --- 
+
 Typescript introduced type system into javascript, but it is only existed till compiled into javascript.
 When we run those compiled code in runtime, all the types are disappeared.
 
