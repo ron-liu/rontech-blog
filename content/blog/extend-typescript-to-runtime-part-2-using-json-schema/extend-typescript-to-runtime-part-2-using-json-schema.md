@@ -133,4 +133,4 @@ export interface Person {
 
 In this article, we use another approach to connect realtime check and static typescript type by using more standard JSON Schema.
 Check the following digram for more details:
-![JSON schema and typescript](../assets/json-schema-ts.png)
+![JSON schema and typescript](./json-schema-ts.png)
