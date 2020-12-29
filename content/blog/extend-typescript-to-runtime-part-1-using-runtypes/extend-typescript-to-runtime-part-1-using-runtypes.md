@@ -1,5 +1,5 @@
 ---
-title: Extend typescript to runtime - Part I using runtypes
+title: Extend typescript to runtime - Part 1 using runtypes
 date: "2020-12-20"
 description: typescript types will be wiped when compiling, but how to use these types in runtime?
 --- 
