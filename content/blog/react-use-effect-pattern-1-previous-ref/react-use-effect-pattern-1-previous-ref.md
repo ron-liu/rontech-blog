@@ -13,7 +13,9 @@ When we stated to use useEffect and slowly put more and more logics in the effec
 For example, the original goal of the effect is to execute it when the `A` prop is changed. However, because we end up with other props in deps list like `func1` prop and `obj1` prop, the effect triggering logic became either `A`, `func1` or `obj1` changed. For example check the following example.
 
 ```typescript
-const Person:React.FC<{name: string, onImpression: (event: {name: string}) => void> = () => {
+type Props = {name: string, onImpression: (event: {name: string} ) =>void;
+
+const Person:React.FC<Props> = ({name, onImpression}) => {
   useEffect(() => {
     onImpression({name})
   }, [onImpression, name])
