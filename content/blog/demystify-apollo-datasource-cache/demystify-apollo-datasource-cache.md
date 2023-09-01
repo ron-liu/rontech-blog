@@ -4,7 +4,7 @@ date: "2021-02-28"
 description: What apollo datasource cache do and what the problem dataloader cache doesn't solve
 ---
 
-Apollo data source and dataloader both support cache, but what they are exactly doing and why we need both of them. This article is trying to demystify this question.
+Apollo data source and dataloader both support cache, why we still need data source cache, what problem apollo data source can solve while dataloader cannot. This article is trying to demystify this question.
 
 When we develop graphql server using apollo server with REST api as the backend, we will use apollo datasource as recommended.
 As the document says:
@@ -313,6 +313,6 @@ Hitting: byId/3
 
 What apollo data source cache?
 
-* cache for duplicated requests per graphql request
+* cache for duplicated requests per graphql request, this feature can be done by `dataloader` as well
 
 * cache for by respecting to the Cache-Control header in response across graphql requests

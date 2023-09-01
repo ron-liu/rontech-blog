@@ -63,7 +63,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-        sort: { fields: [fileAbsolutePath], order: DESC }
+        sort: {frontmatter: {date: DESC}}
         filter: {fileAbsolutePath: {regex: "/content\/learned-today/.*\\.md$/"}}
        ) {
       edges {

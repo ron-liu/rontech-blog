@@ -13,7 +13,7 @@ We can filter `fileAbsolutePath` by using regular expression, check below or [qu
 ```graphql
 {
   allMarkdownRemark(
-    sort: { order: DESC, fields: [frontmatter___date] }
+    sort: { frontmatter: { date: ASC } }
     filter: { fileAbsolutePath: { regex: "/(type1)/.*\\.md$/" } }
   ) {
     edges {
