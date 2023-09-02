@@ -7,7 +7,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 import { LearnedTodayPageQueryQuery } from "../../graphql-types"
-import {parse, format} from 'date-fns'
+import { parse, format } from "date-fns"
 
 const BlogIndex = ({
   data,
@@ -24,7 +24,9 @@ const BlogIndex = ({
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.frontmatter.date
         const group = node.fileAbsolutePath.match(/\d{4}-\d{2}-\d{2}/)
-        const today = group ? format(parse(group[0], 'yyyy-MM-dd', new Date()), 'd MMM, yyyy') : 'today'
+        const today = group
+          ? format(parse(group[0], "yyyy-MM-dd", new Date()), "d MMM, yyyy")
+          : "today"
         return (
           <article key={node.fields.slug}>
             <header>
