@@ -1,4 +1,5 @@
 # RonTech Blog
+[![Netlify Status](https://api.netlify.com/api/v1/badges/35fa6cba-5587-44ec-91b7-bee1cdcdc5bf/deploy-status)](https://app.netlify.com/sites/gifted-wing-724975/deploys)
 
 This is the source code for the blog located in <https://www.rontech.com.au>
 
