@@ -1,6 +1,6 @@
 ---
 title: The confusion nil pointer in golang
-date: "2021-02-26"
+date: "2023-02-26"
 ---
 
 When I firstly learn golang, I think `nil` is just like `undefined` in javascript. It just means it point to nothing.
