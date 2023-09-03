@@ -1,5 +1,5 @@
 ---
-title: Testing Public and Private Methods in Golang Packages A Comprehensive Guide
+title: "Testing Public and Private Methods in Golang Packages: A Comprehensive Guide"
 date: "2023-09-03"
 ---
 
