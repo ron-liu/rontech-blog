@@ -38,7 +38,7 @@
     "typography-theme-wordpress-2016": "0.16.19"
   },
   "devDependencies": {
-    "@types/react-helmet": "6.1.6",
+    "@types/react-helmet": "6.1.11",
     "prettier": "3.0.3"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
